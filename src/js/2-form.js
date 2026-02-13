@@ -28,7 +28,9 @@ function onFormSubmit(event) {
   event.preventDefault();
   if (!formData.email || !formData.message) {
     alert('Fill please all fields');
+    return;
   }
+  console.log(formData);
 
   localStorage.removeItem(STORAGE_KEY);
   formData = { email: '', message: '' };
